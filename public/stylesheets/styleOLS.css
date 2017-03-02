@@ -1,0 +1,197 @@
+html {
+  background: url('../website_high_quality.png') no-repeat center center fixed;
+  font-family: "Josefin Sans";
+  margin-left: 200px;
+  margin-top: 60px;
+  line-height: 1.4;
+}
+
+.mobile-description {
+  display: none;
+
+}
+#logo {
+  display:none;
+}
+
+#image {
+  float: right;
+  max-height: 100%;
+  max-width: 80%;
+}
+
+#name {
+  width: 30%;
+  font-size: 1.8em;
+}
+
+#wrapper {
+  display: inline-block;
+  width: 60%;
+}
+
+.description {
+  float: left;
+  width: 40%;
+  font-size: 1.5em;
+}
+
+#links {
+  display: flex;
+  float: left;
+  clear: left;
+}
+
+#portfolio {
+  float: right;
+  margin-right: 180px;
+  font-size: 1.5em;
+}
+
+a:hover {
+  color: #4099FF;
+}
+a:visited {
+  color: #4099FF;
+}
+a:link {
+  text-decoration: none ;
+  color: #000;
+}
+
+.github {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  background: transparent url('../github3.png') center center no-repeat;
+  background-size: 100%;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 35px;
+}
+
+.linkedin {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  background: transparent url('../linkedin.png') center center no-repeat;
+  background-size: 100%;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 35px;
+}
+
+.twitter {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  background: transparent url('../icon_twitter.png') center center no-repeat;
+  background-size: 100%;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/*Media Queries*/
+
+@media screen and (max-width:600px) {
+
+  html {
+    background: none;
+    font-family: "Josefin Sans";
+    line-height: 1.4;
+    margin: auto;
+    text-align: center;
+  }
+
+  #name {
+    display: inline;
+    float: center;
+    font-size: 1.4em;
+    width: 100;
+    margin: auto;
+    border: none;
+  }
+
+  #wrapper {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+  }
+
+  #links {
+    display: flex;
+    float: none;
+
+  }
+
+  #portfolio {
+    display: none;
+    height: 50px;
+  }
+
+  #logo {
+    display:block;
+    background: url('../logo.png') center center no-repeat;
+    height: 283px;
+    margin-bottom: -80px;
+    margin-top: -150px;
+  }
+
+
+
+  .mobile-description {
+    display:inline-block;
+    font-size: 1.3em;
+
+  }
+  .description {
+    display: none;
+  }
+
+  .github {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    background: transparent url('../github3.png') center center no-repeat;
+    background-size: 100%;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: 15px;
+  }
+
+  .linkedin {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    background: transparent url('../linkedin.png') center center no-repeat;
+    background-size: 100%;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: 15px;
+  }
+
+  .twitter {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    background: transparent url('../icon_twitter.png') center center no-repeat;
+    background-size: 100%;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+
+}
