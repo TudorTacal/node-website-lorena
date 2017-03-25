@@ -1,15 +1,44 @@
 html {
-  background: url('../website_high_quality.png') no-repeat center center fixed;
+  background: url('../lorena.png') no-repeat center center fixed;
   font-family: "Josefin Sans";
   margin-left: 200px;
-  margin-top: 60px;
+  margin-top: 0px;
   line-height: 1.4;
 }
 
 .mobile-description {
   display: none;
-
 }
+
+#portfolio {
+  float: right;
+  margin-right: 50px;
+  font-size: 1.5em;
+  max-width: 30%;
+  line-height: 100%;
+}
+form {
+  text-align: center;
+}
+.btn {
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 20px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  background-color: #4099FF;
+  /*box-shadow: 0px 5px 0px 0px #3C93D5;*/
+}
+.btn:hover {
+  background-color: #6FC6FF;
+}
+#offer {
+  text-align: center;
+}
+
 #logo {
   display:none;
 }
@@ -42,34 +71,15 @@ html {
   clear: left;
 }
 
-#portfolio {
-  float: right;
-  margin-right: 180px;
-  font-size: 1.5em;
+a:link {
+  text-decoration: none;
+  color: black;
 }
-
 a:hover {
-  color: #4099FF;
+  color: 4099FF;
 }
 a:visited {
-  color: #4099FF;
-}
-a:link {
-  text-decoration: none ;
-  color: #000;
-}
-
-.github {
-  display: block;
-  width: 50px;
-  height: 50px;
-  margin: 0 auto;
-  background: transparent url('../github3.png') center center no-repeat;
-  background-size: 100%;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  margin-right: 35px;
+  color: 4099FF;
 }
 
 .linkedin {
@@ -82,7 +92,35 @@ a:link {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
-  margin-right: 35px;
+  margin-right: 10px;
+}
+
+.instagram {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  background: transparent url('../InstagramIcon.png') center center no-repeat;
+  background-size: 100%;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 10px;
+
+}
+
+.facebook {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  background: transparent url('../facebook_icon.png') center center no-repeat;
+  background-size: 100%;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 10px;
+
 }
 
 .twitter {
@@ -131,14 +169,12 @@ a:link {
 
   }
 
-  #portfolio {
+  #portofolio {
     display: none;
-    height: 50px;
   }
 
   #logo {
     display:block;
-    background: url('../logo.png') center center no-repeat;
     height: 283px;
     margin-bottom: -80px;
     margin-top: -150px;
@@ -155,36 +191,51 @@ a:link {
     display: none;
   }
 
-  .github {
-    display: block;
-    width: 40px;
-    height: 40px;
-    margin: 0 auto;
-    background: transparent url('../github3.png') center center no-repeat;
-    background-size: 100%;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    margin-right: 15px;
-  }
-
   .linkedin {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     margin: 0 auto;
     background: transparent url('../linkedin.png') center center no-repeat;
     background-size: 100%;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
-    margin-right: 15px;
+    margin-right: 10px;
+  }
+
+  .instagram {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background: transparent url('../InstagramIcon.png') center center no-repeat;
+    background-size: 100%;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: 10px;
+
+  }
+
+  .facebook {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background: transparent url('../facebook_icon.png') center center no-repeat;
+    background-size: 100%;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: 10px;
+
   }
 
   .twitter {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     margin: 0 auto;
     background: transparent url('../icon_twitter.png') center center no-repeat;
     background-size: 100%;
