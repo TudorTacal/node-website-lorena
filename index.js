@@ -11,11 +11,19 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
-  response.render('indexOldTemplate');
+  response.render('index');
 });
 
-app.get('/trainings', function(request, response) {
-  response.render('trainings');
+app.get('/workouts', function(request, response) {
+  response.render('workouts');
+});
+
+app.get('/nutrition', function(request, response){
+  response.render('nutrition');
+});
+
+app.get('/contacts', function(request, response){
+  response.render('contacts');
 });
 
 app.listen(app.get('port'), function() {
