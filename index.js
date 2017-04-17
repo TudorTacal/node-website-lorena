@@ -35,6 +35,10 @@ app.get('/contacts', function(request, response){
   response.render('contacts');
 });
 
+app.get('/introduceContentOnYourWebsite', function(request, response){
+  response.render('content.ejs');
+});
+
 app.post('/contacts', jsonParser, function (req, res) {
   var mailOpts, smtpTrans;
 
