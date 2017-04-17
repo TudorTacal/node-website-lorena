@@ -68,13 +68,14 @@
                     </div>
                     <div class="col-4">
                     	<h2><span class="color-1">Contact</span> form</h2>
-                        <form id="form" method="post" >
-                            <fieldset>
-                              <label><input type="text" value="Name" onBlur="if(this.value=='') this.value='Name'" onFocus="if(this.value =='Name' ) this.value=''"></label>
-                              <label><input type="text" value="Email" onBlur="if(this.value=='') this.value='Email'" onFocus="if(this.value =='Email' ) this.value=''"></label>
-                              <label><textarea onBlur="if(this.value==''){this.value='Message'}" onFocus="if(this.value=='Message'){this.value=''}">Message</textarea></label>
+                        <form id="form" method="post" action='/contacts' >
+
+                              <label for='name'><input type="text" name='name' value="Name" onBlur="if(this.value=='') this.value='Name'" onFocus="if(this.value =='Name' ) this.value=''"></label>
+                              <label for='email'><input type="text" name='email' value="Email" onBlur="if(this.value=='') this.value='Email'" onFocus="if(this.value =='Email' ) this.value=''"></label>
+                              <label for='message'><textarea name='message' onBlur="if(this.value==''){this.value='Message'}" onFocus="if(this.value=='Message'){this.value=''}">Message</textarea></label>
                               <div class="btns"><a href="#" class="button">Clear</a><a href="#" class="button" onClick="document.getElementById('form').submit()">Send</a></div>
-                            </fieldset>
+
+
                           </form>
                     </div>
                 </div>
@@ -85,8 +86,7 @@
     </section>
 <!--==============================footer=================================-->
     <footer>
-        <p>© 2012 Fitness Club</p>
-        <p><a rel="nofollow" href="http://templatemonster.com" class="link" target="_blank">Website Template</a> by TemplateMonster.com | <a rel="nofollow" href="http://www.html5xcss3.com" class="link" target="_blank">html5xcss3.com</a></p>
+        <p>© Lorena Personal Trainer  | Website By <a href="http://www.tudortacal.com" target="_blank">Tudor Tacal</a></p>
     </footer>
 </div>
 <script>
