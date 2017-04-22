@@ -42,7 +42,6 @@ app.get('/introduceContentOnYourWebsite', function(request, response){
 app.post('/contacts', jsonParser, function (req, res) {
   var mailOpts, smtpTrans;
 
-  //Setup Nodemailer transport, I chose gmail. Create an application-specific password to avoid problems.
   smtpTrans = nodemailer.createTransport({
       service: 'Gmail',
       auth: {
