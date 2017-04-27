@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-app.get('/', function(request, response) {
+app.get('/', (request, response) =>  {
   response.render('index');
 });
 
