@@ -39,35 +39,35 @@ app.get('/introduceContentOnYourWebsite', function(request, response){
   response.render('content.ejs');
 });
 
-// app.post('/contacts', jsonParser, function (req, res) {
-//   var mailOpts, smtpTrans;
-//
-//   smtpTrans = nodemailer.createTransport({
-//       service: 'Gmail',
-//       auth: {
-//           user: "lorenatacal@gmail.com",
-//           pass: "Imortality1987!"
-//       }
-//   });
-//
-//   mailOpts = {
-//       from: req.body.name + ' &lt;' + req.body.email + '&gt;',
-//       to: 'lorenatacal@gmail.com',
-//       subject: 'Mail from your Website',
-//       text: req.body.message
-//   };
-//
-//   smtpTrans.sendMail(mailOpts, function (error, response) {
-//       if (error) {
-//           console.log('Not sent');
-//           res.render('contacts', { title: 'Lorena Personal Trainer - Contact', msg: 'Error occured, message not sent.', err: true, page: 'contacts' })
-//       }
-//       else {
-//           console.log('sent');
-//           res.render('contacts', { title: 'Lorena Personal Trainer - Contact', msg: 'Message sent! Thank you.', err: false, page: 'contacts' })
-//       }
-//   });
-// });
+app.post('/contacts', jsonParser, function (req, res) {
+  var mailOpts, smtpTrans;
+
+  smtpTrans = nodemailer.createTransport({
+      service: 'Gmail',
+      auth: {
+          user: "lorenatacal@gmail.com",
+          pass: "Imortality1987!"
+      }
+  });
+
+  mailOpts = {
+      from: req.body.name + ' &lt;' + req.body.email + '&gt;',
+      to: 'lorenatacal@gmail.com',
+      subject: 'Mail from your Website',
+      text: req.body.message
+  };
+
+  smtpTrans.sendMail(mailOpts, function (error, response) {
+      if (error) {
+          console.log('Not sent');
+          res.render('contacts', { title: 'Lorena Personal Trainer - Contact', msg: 'Error occured, message not sent.', err: true, page: 'contacts' })
+      }
+      else {
+          console.log('sent');
+          res.render('contacts', { title: 'Lorena Personal Trainer - Contact', msg: 'Message sent! Thank you.', err: false, page: 'contacts' })
+      }
+  });
+});
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
