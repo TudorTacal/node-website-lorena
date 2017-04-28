@@ -59,11 +59,11 @@ app.post('/contacts', jsonParser, function (req, res) {
 
   smtpTrans.sendMail(mailOpts, function (error, response) {
       if (error) {
+          console.log(error);
           console.log('Not sent');
           res.render('contacts', { title: 'Lorena Personal Trainer - Contact', msg: 'Error occured, message not sent.', err: true, page: 'contacts' })
       }
       else {
-          console.log(error);
           console.log('sent');
           res.render('contacts', { title: 'Lorena Personal Trainer - Contact', msg: 'Message sent! Thank you.', err: false, page: 'contacts' })
       }
