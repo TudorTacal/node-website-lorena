@@ -63,6 +63,7 @@ app.post('/contacts', jsonParser, function (req, res) {
           res.render('contacts', { title: 'Lorena Personal Trainer - Contact', msg: 'Error occured, message not sent.', err: true, page: 'contacts' })
       }
       else {
+          console.log(error);
           console.log('sent');
           res.render('contacts', { title: 'Lorena Personal Trainer - Contact', msg: 'Message sent! Thank you.', err: false, page: 'contacts' })
       }
