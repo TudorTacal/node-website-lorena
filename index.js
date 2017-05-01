@@ -3,6 +3,7 @@ var app = express();
 var nodemailer = require('nodemailer');
 var bodyParser = require('body-parser')
 
+
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 var jsonParser = bodyParser.json();
 
@@ -43,30 +44,39 @@ app.post('/contacts', jsonParser, function (req, res) {
   var mailOpts, smtpTrans;
 
   smtpTrans = nodemailer.createTransport({
-      service: 'Gmail',
-      auth: {
-          user: "lorenatacal@gmail.com",
-          pass: "Imortality1987!"
-      }
+    service: 'Gmail',
+    auth: {
+      user: "lorenatacal@gmail.com",
+      pass: "Imortality1987!"
+    }
   });
 
   mailOpts = {
-      from: req.body.name + ' &lt;' + req.body.email + '&gt;',
-      to: 'lorenatacal@gmail.com',
-      subject: 'Mail from your Website',
-      text: req.body.message
+    from: req.body.name + ' &lt;' + req.body.email + '&gt;',
+    to: 'lorenatacal@gmail.com',
+    subject: 'Mail from your Website',
+    text: req.body.message
   };
 
   smtpTrans.sendMail(mailOpts, function (error, response) {
-      if (error) {
-          console.log(error);
-          console.log('Not sent');
-          res.render('contacts', { title: 'Lorena Personal Trainer - Contact', msg: 'Error occured, message not sent.', err: true, page: 'contacts' })
-      }
-      else {
-          console.log('sent');
-          res.render('contacts', { title: 'Lorena Personal Trainer - Contact', msg: 'Message sent! Thank you.', err: false, page: 'contacts' })
-      }
+    if (error) {
+      console.log(error);
+      console.log('Not sent');
+      res.render('contacts', { title: 'Lorena Personal Trainer - Contact', msg: 'Error occured, message not sent.', err: true, page: 'contacts' })
+    }
+    else {
+      console.log('sent');
+      res.render('contacts', { title: 'Lorena Personal Trainer - Contact', msg: 'Message sent! Thank you.', err: false, page: 'contacts' })
+    }
+  });
+
+  // verify connection configuration
+  smtpTrans.verify(function(error, success) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Server is ready to take our messages');
+    }
   });
 });
 
