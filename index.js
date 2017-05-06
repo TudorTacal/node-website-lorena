@@ -1,3 +1,4 @@
+require('dotenv').config()
 var express = require('express');
 var app = express();
 var nodemailer = require('nodemailer');
@@ -33,6 +34,8 @@ app.get('/nutrition', function(request, response){
 
 app.get('/contacts', function(request, response){
   response.render('contacts');
+  console.log(process.env.EMAIL);
+  console.log('hello');
 });
 
 app.get('/introduceContentOnYourWebsite', function(request, response){
@@ -45,8 +48,8 @@ app.post('/contacts', jsonParser, function (req, res) {
   smtpTrans = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-      user: "lorenatacal@gmail.com",
-      pass: "Imortality1987!"
+      user: process.env.EMAIL,
+      pass: process.env.EMAIL_PASSWORD
     }
   });
 
@@ -61,6 +64,7 @@ app.post('/contacts', jsonParser, function (req, res) {
     if (error) {
       console.log(error);
       console.log('Not sent');
+      console.log(process.env.EMAIL);
       res.render('contacts', { title: 'Lorena Personal Trainer - Contact', msg: 'Error occured, message not sent.', err: true, page: 'contacts' })
     }
     else {
