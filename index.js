@@ -16,7 +16,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-// views is directory for all template files
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
@@ -55,7 +54,7 @@ app.post('/contacts', jsonParser, function (req, res) {
     from: req.body.name + ' &lt;' + req.body.email + '&gt;',
     to: 'lorenatacal@gmail.com',
     subject: 'Mail from your Website',
-    text: req.body.message
+    text: "From: " + req.body.name + " "+ req.body.email + '\n\n' + req.body.message
   };
 
   smtpTrans.sendMail(mailOpts, function (error, response) {
