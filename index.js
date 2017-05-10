@@ -35,7 +35,6 @@ app.get('/nutrition', function(request, response){
 app.get('/contacts', function(request, response){
   response.render('contacts');
   console.log(process.env.EMAIL);
-  console.log('hello');
 });
 
 app.get('/introduceContentOnYourWebsite', function(request, response){
